@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        // add font from /public/fonts/ValorantFont.ttf
+        VALORANT: ['var(--font-valorant)'],
+        // set path: /public/fonts/ValorantFont.ttf
+        
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
