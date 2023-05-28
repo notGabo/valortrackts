@@ -3,9 +3,10 @@ import CrosshairLogo from "@/components/icons/CrosshairLogo";
 
 const Footer = () => {
   return (
-    <div  className="bg-gray-900">
-    <footer className="mx-auto max-w-screen-2xl px-4 md:px-8">
-      
+    <div className="bg-gray-900 ">
+    {/* <footer className="mx-auto max-w-screen-2xl px-4 md:px-8"> */}
+    <footer>
+      <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
         <div className="mb-16 grid grid-cols-2 gap-12 pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
           <div className="col-span-full lg:col-span-2">
             <div className="mb-4 lg:-mt-2">
@@ -27,9 +28,9 @@ const Footer = () => {
               Enlaces
             </p>
             <nav className="flex flex-col gap-4">
-              <div>
+              <div className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-indigo-600">
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   Duoc UC
@@ -37,7 +38,7 @@ const Footer = () => {
               </div>
               <div>
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   Recursos utilizados
@@ -45,7 +46,7 @@ const Footer = () => {
               </div>
               <div>
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   Contacto
@@ -60,7 +61,7 @@ const Footer = () => {
             <nav className="flex flex-col gap-4">
               <div>
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   @Alvaro-AAC
@@ -68,7 +69,7 @@ const Footer = () => {
               </div>
               <div>
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   @notGabo
@@ -83,7 +84,7 @@ const Footer = () => {
             <nav className="flex flex-col gap-4">
               <div>
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   Repositorio front end
@@ -91,7 +92,7 @@ const Footer = () => {
               </div>
               <div>
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   Repositorio back end
@@ -99,7 +100,7 @@ const Footer = () => {
               </div>
               <div>
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   Diagramas
@@ -111,9 +112,19 @@ const Footer = () => {
         <p className="border-t border-gray-800 py-8 text-center text-sm text-gray-400">
           © 2023 - Alvaro Arenas | Gabriel Soto.
         </p>
-      
+        </div>
     </footer>
     </div>
-  );
+    );
+//     <footer>
+//       <div className=" bg-gray-900 text-gray-200 py-10"> 
+//       { /*aqui tuve que declarar css en global para el footer :( */ }
+//         <div className="">
+//           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap2">
+//           </div>
+//         </div>
+//       </div>
+//     </footer>
+//   );
 };
 export default Footer;

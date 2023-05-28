@@ -8,10 +8,14 @@ const page = () => {
   return (
     <>
       {/* <Navbar /> */}
+      <div className="relative flex flex-col h-screen justify-between">
       <Navbarv2 />
-      <FormSearchUser />
-      <UserCardInfo/>
+      <div >
+        <FormSearchUser />
+        <UserCardInfo/>
+        </div>
       <Footer/>
+      </div>
     </>
   );
 };
