@@ -9,12 +9,12 @@ const page = () => {
     <>
       {/* <Navbar /> */}
       <div className="relative flex flex-col h-screen justify-between">
-      <Navbarv2 />
+      { /*<Navbarv2 /> */ }
       <div >
         <FormSearchUser />
         <UserCardInfo/>
         </div>
-      <Footer/>
+      { /*<Footer/> */ }
       </div>
     </>
   );

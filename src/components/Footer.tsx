@@ -3,7 +3,7 @@ import CrosshairLogo from "@/components/icons/CrosshairLogo";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-900 ">
+    <div>
     {/* <footer className="mx-auto max-w-screen-2xl px-4 md:px-8"> */}
     <footer>
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">

@@ -6,6 +6,7 @@ import Navbarv2 from "@/components/Navbarv2";
 import FormSearchUser from "@/components/FormSearchUser";
 import Footer from "@/components/Footer";
 import UserCardInfo from "@/components/UserCardInfo";
+import Example from "@/components/Navbarv3";
 
 const rubik = Rubik({ subsets: ["latin"] });
 const valorant = localFont({
@@ -36,10 +37,9 @@ export default function RootLayout({
     // </html>
     <html lang="es" className={`${valorant.variable}`}>
         <body className="bg-gray-950" >
-        
-          <Navbarv2 />
-          <FormSearchUser />
-          <UserCardInfo />  
+          { /*<Navbarv2 /> */}
+          <Example/>
+
           <Footer  />
         </body>
 

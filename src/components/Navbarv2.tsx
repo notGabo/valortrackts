@@ -5,7 +5,6 @@ import Link from "next/link";
 import CrosshairLogo from "@/components/icons/CrosshairLogo";
 
 const Navbarv2 = () => {
-  // dropdowns menus
   const [isDropdownOpenTablas, setIsDropdownOpenTablas] = useState(false);
   const toggleDropdownTablas = () => {
     setIsDropdownOpenTablas(!isDropdownOpenTablas);
@@ -24,6 +23,11 @@ const Navbarv2 = () => {
   const [isDropdownRegister, setIsDropdownOpenRegister] = useState(false);
   const toggleDropdownRegister = () => {
     setIsDropdownOpenRegister(!isDropdownRegister);
+  };
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -164,9 +168,7 @@ const Navbarv2 = () => {
                         name="password"
                         placeholder="Password"
                         required
-                        className="focus:shadow-outline w-full appearance-none rounded border-b-2 border-rose-600 bg-gray-900 px-4 py-1 text-rose-600 placeholder-rose-900 focus:border-rose-600 focus:outline-none" 
-                        // apply style to change color of display password
-
+                        className="focus:shadow-outline w-full appearance-none rounded border-b-2 border-rose-600 bg-gray-900 px-4 py-1 text-rose-600 placeholder-rose-900 focus:border-rose-600 focus:outline-none"
                       />
                     </div>
                     <button
@@ -190,9 +192,17 @@ const Navbarv2 = () => {
             </li>
           </ul>
           <div className="lg:hidden">
-            <button className="focus:shadow-outline -mr-1 rounded p-2 transition duration-200 focus:outline-none">
+            <button
+              onClick={toggleMobileMenu}
+              className="focus:shadow-outline -mr-1 rounded p-2 transition duration-200 focus:outline-none"
+            >
               <span className="w-fit">
-                <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
+                <svg
+                  className={`w-5 ${
+                    isMobileMenuOpen ? "text-gray-600" : "text-white"
+                  }`}
+                  viewBox="0 0 24 24"
+                >
                   <path
                     fill="currentColor"
                     d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
@@ -211,8 +221,144 @@ const Navbarv2 = () => {
           </div>
         </div>
       </div>
+      {isMobileMenuOpen && (
+        <div className="lg:hidden">
+          <ul className="mt-2 pb-3 space-y-3 px-4">
+            <li>
+              <button
+                onClick={toggleDropdownPerfil}
+                className="hover:text-teal-accent-400 font-medium tracking-wide transition-colors duration-200 focus:outline-none"
+              >
+                Mi perfil
+              </button>
+              {isDropdownOpenPerfil && (
+                <div className="mt-2 pl-2 space-y-2">
+                  <Link
+                    href="/"
+                    className="block text-sm text-rose-600"
+                    passHref
+                  >
+                    Iniciar Sesion
+                  </Link>
+                  <Link
+                    href="/"
+                    className="block text-sm text-rose-600"
+                    passHref
+                  >
+                    Registrarse
+                  </Link>
+                  <Link
+                    href="/"
+                    className="block text-sm text-rose-600"
+                    passHref
+                  >
+                    Cerrar sesion
+                  </Link>
+                </div>
+              )}
+            </li>
+            <li>
+              <button
+                onClick={toggleDropdownTablas}
+                className="hover:text-teal-accent-400 font-medium tracking-wide transition-colors duration-200 focus:outline-none"
+              >
+                Tablas
+              </button>
+              {isDropdownOpenTablas && (
+                <div className="mt-2 pl-2 space-y-2">
+                  <Link
+                    href="/"
+                    className="block text-sm text-rose-600"
+                    passHref
+                  >
+                    Agentes
+                  </Link>
+                  <Link
+                    href="/"
+                    className="block text-sm text-rose-600"
+                    passHref
+                  >
+                    Top jugadores
+                  </Link>
+                  <Link
+                    href="/"
+                    className="block text-sm text-rose-600"
+                    passHref
+                  >
+                    Mapas
+                  </Link>
+                </div>
+              )}
+            </li>
+            <li>
+              <Link
+                className="hover:text-teal-accent-400 font-medium tracking-wide transition-colors duration-200"
+                href="#"
+              >
+                Infografias
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="hover:text-teal-accent-400 font-medium tracking-wide transition-colors duration-200"
+                href="#"
+              >
+                About us
+              </Link>
+            </li>
+            <li>
+              <button
+                onClick={toggleDropdownLogin}
+                className="hover:text-teal-accent-400 font-medium tracking-wide transition-colors duration-200 focus:outline-none"
+              >
+                Iniciar Sesion
+              </button>
+              {isDropdownLogin && (
+                <div className="mt-2 pl-2 space-y-2">
+                  {/* little form to login */}
+                  <form>
+                    <div className="relative mb-4">
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Email"
+                        required
+                        className="focus:shadow-outline w-full appearance-none rounded border-b-2 border-rose-600 bg-gray-900 px-4 py-1 text-rose-600 placeholder-rose-900 focus:border-rose-600 focus:outline-none"
+                      />
+                    </div>
+                    <div className="relative mb-4">
+                      <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Password"
+                        required
+                        className="focus:shadow-outline w-full appearance-none rounded border-b-2 border-rose-600 bg-gray-900 px-4 py-1 text-rose-600 placeholder-rose-900 focus:border-rose-600 focus:outline-none"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className="mt-4 block w-full transform rounded-md bg-rose-600 px-4 py-2 text-center text-sm font-medium leading-5 text-white transition-colors duration-200 hover:bg-green-800 focus:bg-rose-500 focus:outline-none"
+                    >
+                      Entrar
+                    </button>
+                  </form>
+                </div>
+              )}
+            </li>
+            <li>
+              <Link
+                className="focus:shadow-outline rounded-global inline-flex h-12 items-center justify-center bg-rose-600 px-6 font-medium tracking-wide text-white shadow-md transition duration-200 focus:outline-none"
+                href="#"
+              >
+                Sign up
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
-
   );
 };
 
