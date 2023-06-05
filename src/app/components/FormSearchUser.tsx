@@ -1,12 +1,12 @@
-import SearchIcon from "@/components/icons/SearchIcon";
+// import SearchIcon from "@/components/icons/SearchIcon";
 
 const FormSearchUser = () => {
     return (
     <form className="flex flex-wrap gap-2 items-center justify-center bg-gray-900	p-2 rounded-xl">
-    <span className="min-w-[20px]">
+    {/* <span className="min-w-[20px]">
       <SearchIcon 
         className="fill-rose-600" />
-      </span>
+      </span> */}
     <input 
       type="text" 
       placeholder="Buscar jugador..."
