@@ -1,23 +1,18 @@
-import FormSearchUser from "@/components/FormSearchUser";
-import Navbar from "@/components/Navbar";
-import Navbarv2 from "@/components/Navbarv2";
-import UserCardInfo from "@/components/UserCardInfo";
-import Footer from "@/components/Footer";
+"use client"
+import { Fragment, useState} from "react";
+import { Accordion, AccordionHeader, AccordionBody } from "@material-tailwind/react";
+import Carrusel from "./components/Carrusel";
+import Image from "next/image";
+import Carta from "./components/Carta";
+import HomeBody from "./components/homeBody";
 
-const page = () => {
+const home = () => {
   return (
-    <>
-      {/* <Navbar /> */}
-      <div className="relative flex flex-col h-screen justify-between">
-      { /*<Navbarv2 /> */ }
-      <div >
-        <FormSearchUser />
-        <UserCardInfo/>
-        </div>
-      { /*<Footer/> */ }
-      </div>
-    </>
+    <div className="relative">
+        <Carrusel />
+        <HomeBody />
+    </div>
   );
 };
 
-export default page;
+export default home;

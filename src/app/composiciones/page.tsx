@@ -1,6 +1,6 @@
 import Construccion from "../components/Construccion";
 
-const login = () => {
+const composiciones = () => {
   return (
      
     <>
@@ -9,4 +9,4 @@ const login = () => {
     );
 };
 
-export default login;
+export default composiciones;
