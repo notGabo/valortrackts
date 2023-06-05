@@ -1,29 +1,29 @@
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import { ChartBarSquareIcon, BoltIcon, ArrowTrendingUpIcon, UsersIcon } from '@heroicons/react/24/outline'
 
 const features = [
   {
     name: 'Análisis avanzado basado en IA',
     description:
       'ValorTrack utiliza algoritmos de inteligencia artificial para analizar en profundidad tus partidas en Valorant. Esta característica innovadora permite identificar patrones de juego, detectar áreas de mejora específicas y ofrecer recomendaciones personalizadas para potenciar tu rendimiento',
-    icon: CloudArrowUpIcon,
+    icon: ChartBarSquareIcon,
   },
   {
     name: 'Retroalimentación en instantanea',
     description:
       'Con ValorTrack, obtendrás retroalimentación sobre tus decisiones, movimientos y habilidades en el juego. La plataforma te informará sobre qué estás haciendo bien y en qué áreas puedes mejorar, lo que te permitirá ajustar tu enfoque y tomar decisiones más informadas en justo despues de terminar tu partida.',
-    icon: LockClosedIcon,
+    icon: BoltIcon,
   },
   {
     name: 'Entrenamiento adaptativo',
     description:
       'Nos adaptamos a tu estilo de juego y a tu progreso individual. A medida que avanzas y mejoras, la plataforma ajusta sus recomendaciones y desafíos para mantenerte desafiado y ayudarte a crecer constantemente como jugador. Esta característica innovadora asegura que recibas un entrenamiento personalizado y relevante en todo momento.',
-    icon: ArrowPathIcon,
+    icon: ArrowTrendingUpIcon,
   },
   {
     name: 'Comunidad de jugadores',
     description:
       'ValorTrack no solo se trata de mejorar individualmente, sino de conectarte con otros jugadores que comparten tu pasión por Valorant. La plataforma cuenta con una comunidad integrada donde puedes interactuar, compartir consejos y estrategias, y participar en desafíos amistosos. Esta característica fomenta el aprendizaje colaborativo y la colaboración entre jugadores, lo que lleva a un crecimiento colectivo.',
-    icon: FingerPrintIcon,
+    icon: UsersIcon,
   },
 ]
 
