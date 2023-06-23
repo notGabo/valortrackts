@@ -1,27 +1,11 @@
 "use client"
-import { MagnifyingGlassIcon, ChevronUpDownIcon } from "@heroicons/react/24/outline";
-import axios from 'axios';
+import { ChevronUpDownIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import {
-  Card,
-  CardHeader,
-  Input,
-  Typography,
-  Button,
-  CardBody,
-  Chip,
-  CardFooter,
-  Tabs,
-  TabsHeader,
-  Tab,
-  Avatar,
-  IconButton,
-  Tooltip,
-} from "@material-tailwind/react";
+import {Card,Typography,CardBody,Avatar} from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import { CgSpinnerAlt } from "react-icons/cg";
 
-const TABLE_HEAD = ["Nombre de agente", "Rol", "Descripción"];
+const TABLE_HEAD = ["Nombre de agente", "Rol", "Descripción",  "Popularidad %", "Winrate %", "Lossrate %" ];
 
 type Agentes = {
   uuid: string;
@@ -31,35 +15,50 @@ type Agentes = {
     displayName: string;
   };
   description: string;
+  totalmatch: number;
+  agentname: string;
+  timespicked: number;
+  pickrate: number;
+  gamesplayed: number;
+  wins: number;
+  loss: number;
+  winrate: number;
 };
 
 export function getUuidAgenteFromClick(uuid: string) {
   return uuid;
 }
 
-export default function Example() {
+export default function TablaAgentes() {
 
   const [agentes, setAgentes] = useState<Agentes[]>([]);
 
-  // todo reemplazar esto por fetch a backend
-  useEffect(() => {
+  useEffect(() => { 
+    const urlAgentesData = 'http://localhost:3000/api/agentes'
+    const urlAgentesStats = 'https://g722d0e58d6fa66-clasesdb.adb.sa-santiago-1.oraclecloudapps.com/ords/valortrack/api/v1/agentdata/'
     const fetchAgentes = async () => {
-      try {
-        const response = await axios.get('https://valorant-api.com/v1/agents?isPlayableCharacter=True&language=es-ES');
-        const agentesFiltered = response.data.data.map(({ uuid, displayIconSmall, displayName, role, description }: Agentes) => ({
-          uuid,
-          displayIconSmall,
-          displayName,
-          role: role.displayName,
-          description,
-        }));
-        setAgentes(agentesFiltered);
-      } catch (error) {
+      try{
+        const responseData = await fetch(urlAgentesData);
+        const responseStats = await fetch(urlAgentesStats);
 
+        const data = await responseData.json();
+        const stats = await responseStats.json();
+
+        const agentes = data.data.map((agente: Agentes) => {
+          const statsAgente = stats.items.find((statsAgente: any) => statsAgente.agentname === agente.displayName);
+          return {
+            ...agente,
+            ...statsAgente,
+          };
+        });
+        setAgentes(agentes);
+      } catch (error) {
+        console.log(error)
       }
-    };
+     }
     fetchAgentes();
   }, []);
+
 
 
   if (!agentes.length){
@@ -112,20 +111,20 @@ export default function Example() {
             </tr>
           </thead>
           <tbody>
-            {agentes.map(({ displayIconSmall, displayName, uuid, role, description }, index) => {
+            {agentes.map(( agente, index) => {
               const isLast = index === agentes.length - 1;
               const classes = isLast ? "p-4" : "p-4 border-b border-rose-600 ";
 
               return (
-                <tr key={displayName}>
+                <tr key={index}>
                   <td className={classes}>
                     <div className="flex items-center gap-3">
-                      <Avatar src={displayIconSmall} alt={displayName} size="sm" />
+                      <Avatar src={agente.displayIconSmall} alt={agente.agentname} size="sm" />
                       <div className="flex flex-col">
                         <Typography variant="small" color="blue-gray" className="text-white font-normal">
                           {/* link with displayname name as href */}
-                          <Link href={`/agentes/${uuid}`}>
-                            {displayName}
+                          <Link href={`/agentes/${agente.uuid}`}>
+                            {agente.displayName}
                           </Link>
                         </Typography>
                         <Typography
@@ -133,7 +132,7 @@ export default function Example() {
                           color="blue-gray"
                           className="text-white font-normal opacity-70"
                         >
-                          {uuid}
+                          {agente.uuid}
                         </Typography>
                       </div>
                     </div>
@@ -141,13 +140,28 @@ export default function Example() {
                   <td className={classes}>
                     <div className="flex flex-col">
                       <Typography variant="small" color="blue-gray" className="text-white font-normal">
-                        {role}
+                        {agente.role.displayName}
                       </Typography>
                     </div>
                   </td>
                   <td className={classes}>
                     <Typography variant="small" color="blue-gray" className="text-white font-normal">
-                      {description}
+                      {agente.description}
+                    </Typography>
+                  </td>
+                  <td className={classes}>
+                    <Typography variant="small" color="blue-gray" className="text-white font-normal">
+                      {agente.pickrate}%
+                    </Typography>
+                  </td>
+                  <td className={classes}>
+                    <Typography variant="small" color="blue-gray" className="text-white font-normal">
+                      {agente.winrate}%
+                    </Typography>
+                  </td>
+                  <td className={classes}>
+                    <Typography variant="small" color="blue-gray" className="text-white font-normal">
+                      {(agente.loss*100 / agente.gamesplayed).toFixed(2)}%
                     </Typography>
                   </td>
                 </tr>

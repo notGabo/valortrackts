@@ -1,8 +1,9 @@
 "use client"
 import { useState } from "react";
-
+import { useRouter } from "next/navigation";
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
 
   const handleInputChange = (event: any) => {
     setSearchQuery(event.target.value);
@@ -11,6 +12,7 @@ const SearchBar = () => {
   const handleSearch = () => {
     // Lógica para realizar la búsqueda
     console.log("Realizando búsqueda:", searchQuery);
+    router.push('/busqueda');
   };
 
   

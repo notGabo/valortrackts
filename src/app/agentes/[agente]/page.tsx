@@ -202,6 +202,14 @@ export default function Agente() {
               {stats?.winrate ? stats?.winrate+'%' : "N/A"}
             </p>
           </div>
+          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 bg-gray-900 rounded-md shadow-md text-white transition duration-300 hover:bg-[#0db196]">
+            <span className="text-xl tracking-wider font-VALORANT uppercase">
+              Porcentaje de derrotas
+            </span>
+            <p className="text-white mt-2 font-semibold text-2xl">
+              {stats?.loss ? ((stats?.loss*100)/stats?.gamesplayed).toFixed(2)+'%' : "N/A"}
+            </p>
+          </div>
         </div>
   
         <img
