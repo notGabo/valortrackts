@@ -6,6 +6,7 @@
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--secondary) var(--primary);
+    --swiper-theme-color: #e11d48;
   }
   
   /* Chrome, Edge, and Safari */

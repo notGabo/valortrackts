@@ -1,14 +1,16 @@
 "use client"
-import { Fragment, useState} from "react";
-import { Accordion, AccordionHeader, AccordionBody } from "@material-tailwind/react";
 import Carrusel from "./components/Carrusel";
-import Image from "next/image";
 import HomeBody from "./components/homeBody";
+import Image from "next/image";
+import App from "./components/Swipper";
+import SearchBar from "./components/Searchbar";
 
 const home = () => {
   return (
-    <div className="relative">
-        <Carrusel />
+    <div className="">
+        <SearchBar/>
+        <App/>
+        {/* <Carrusel /> */}
         <HomeBody />
     </div>
   );

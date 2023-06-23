@@ -29,7 +29,7 @@ const features = [
 
 export default function HomeBody() {
   return (
-    <div className="bg-gray-950 py-24 sm:py-32">
+    <div className="bg-gray-950  sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <p className="mt-2 text-3xl font-VALORANT text-center tracking-tight text-rose-600 sm:text-4xl">

@@ -76,7 +76,12 @@ const Carrusel = () => {
           </div>
         ))}
       </Slide>
+
+
+      
     </div>
+
+    
   );
 };
 export default Carrusel;
