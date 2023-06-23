@@ -9,7 +9,6 @@ const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !(dropdownRef.current as HTMLElement).contains(event.target as Node)) {
@@ -34,24 +33,20 @@ const Dropdown = () => {
       classHref: "/jugadores",
     },
   ];
+
   return (
-    <div
-      className="lg:px-5 py-2 cursor-default block text-center"
-      ref={dropdownRef}
-    >
+    <div className="lg:px-5 py-2 cursor-default block text-center relative">
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className={`${
-          isOpen ? "text-white " : "text-rose-600"
-        }  transition rounded-lg items-center justify-between `}
+        className={`${isOpen ? "text-white" : "text-rose-600"} transition rounded-lg items-center justify-between`}
       >
         <p className="transition hover:text-white">Tablas</p>
       </button>
       {isOpen ? (
-        <div className="border border-[#e11d48] bg-gray-900 absolute lg:top-16 flex flex-wrap items-start rounded-lg p-2 justify-center cursor-default rounded-r-lg border-left-trasparent">
+        <div className="border border-[#e11d48] bg-gray-900 absolute pl-10 pr-10 top-10 lg:top-16 left-0 w-full flex flex-wrap items-start rounded-lg p-2 justify-center cursor-default rounded-r-lg border-left-trasparent z-10">
           {paginas.map((pagina, i) => (
             <Link href={pagina.classHref} key={i}>
-              <p className="block px-4 py-2 transition cursor-default hover:text-white sm:w-full sm:justify-center">
+              <p className="block px-4 py-2 transition cursor-default  hover:text-white sm:w-full sm:justify-center">
                 {pagina.p}
               </p>
             </Link>
@@ -61,7 +56,6 @@ const Dropdown = () => {
     </div>
   );
 };
-
 export default function Navmenu() {
   const [openNav, setOpenNav] = useState(false);
   const [textButton, setTextButton] = useState(<Link
