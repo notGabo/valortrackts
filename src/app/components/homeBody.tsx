@@ -29,13 +29,13 @@ const features = [
 
 export default function HomeBody() {
   return (
-    <div className="bg-gray-950  sm:py-32">
+    <div className="dark:bg-gray-950 bg-[#fcf8ed] sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <p className="mt-2 text-3xl font-VALORANT text-center tracking-tight text-rose-600 sm:text-4xl">
             Mejora ahora mismo
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-400">
+          <p className="mt-6 text-lg leading-8 dark:text-gray-400 text-neutral-700">
           Atrévete a dar el siguiente paso y lleva tu gameplay en Valorant a nuevos horizontes. Con ValorTrack, tienes a tu disposición las herramientas más innovadoras para analizar, aprender y superarte en cada partida. No te conformes con ser solo otro jugador, aprovecha esta oportunidad y desbloquea todo tu potencial en Valorant. ¡La mejora está a tu alcance!
           </p>
         </div>
@@ -49,7 +49,7 @@ export default function HomeBody() {
                   </div>
                   {feature.name}
                 </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-400">{feature.description}</dd>
+                <dd className="mt-2 text-base leading-7 dark:text-gray-400 text-neutral-700">{feature.description}</dd>
               </div>
             ))}
           </dl>

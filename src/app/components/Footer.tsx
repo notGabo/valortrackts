@@ -4,32 +4,32 @@ import CrosshairLogo from "./icons/CrosshairLogo";
 const Footer = () => {
   return (
     <>
-    <footer className="bottom-0 w-full h-20 bg-gray-900">
-      <div className="bg-gray-900 px-4 md:px-8">
+    <footer className="bottom-0 w-full h-20 ">
+      <div className="dark:bg-gray-900 bg-[#eee7d8] px-4 md:px-8">
         <div className="mb-16 grid grid-cols-2 gap-12 pt-10 md:grid-cols-4 lg:grid-cols-5 lg:gap-8 lg:pt-12">
           <div className="col-span-full lg:col-span-2">
             <div className="mb-4">
               <Link
-                className="inline-flex items-center gap-2 text-xl font-bold text-gray-100 md:text-2xl"
+                className="inline-flex items-center gap-2 text-xl font-bold dark:text-gray-100 text-neutral-700 dark:fill-white fill-neutral-700 md:text-2xl"
                 href="#"
               >
-                <CrosshairLogo className="fill-white" width={"35px"} />
+                <CrosshairLogo width={"35px"} />
                 <span className="font-VALORANT">VAlortrack</span>
               </Link>
             </div>
-            <p className="mb-6 text-gray-400 sm:pr-8">
+            <p className="mb-6 dark:text-gray-400 text-neutral-700 sm:pr-8">
               Proyecto de portfolio de titulo Analista Programador. Duoc UC Sede
               Maipú.
             </p>
           </div>
           <div>
-            <p className="mb-4 font-bold uppercase tracking-widest text-gray-100">
+            <p className="mb-4 font-bold uppercase tracking-widest dark:text-gray-100 text-neutral-900">
               Enlaces
             </p>
             <nav className="flex flex-col gap-4">
-              <div className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-indigo-600">
+              <div className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-indigo-600">
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
+                  className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   Duoc UC
@@ -37,7 +37,7 @@ const Footer = () => {
               </div>
               <div>
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
+                  className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   Recursos utilizados
@@ -45,7 +45,7 @@ const Footer = () => {
               </div>
               <div>
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
+                  className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   Contacto
@@ -54,13 +54,13 @@ const Footer = () => {
             </nav>
           </div>
           <div>
-            <p className="mb-4 font-bold uppercase tracking-widest text-gray-100">
+            <p className="mb-4 font-bold uppercase tracking-widest dark:text-gray-100 text-neutral-900">
               Nosotros
             </p>
             <nav className="flex flex-col gap-4">
               <div>
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
+                  className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   @Alvaro-AAC
@@ -68,7 +68,7 @@ const Footer = () => {
               </div>
               <div>
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
+                  className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   @notGabo
@@ -77,13 +77,13 @@ const Footer = () => {
             </nav>
           </div>
           <div>
-            <p className="mb-4 font-bold uppercase tracking-widest text-gray-100">
+            <p className="mb-4 font-bold uppercase tracking-widest dark:text-gray-100 text-neutral-900">
               Documentacion
             </p>
             <nav className="flex flex-col gap-4">
               <div>
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
+                  className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   Repositorio front end
@@ -91,7 +91,7 @@ const Footer = () => {
               </div>
               <div>
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
+                  className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   Repositorio back end
@@ -99,7 +99,7 @@ const Footer = () => {
               </div>
               <div>
                 <Link
-                  className="text-gray-400 transition duration-100 hover:text-rose-500 active:text-rose-600"
+                  className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
                   href="#"
                 >
                   Diagramas

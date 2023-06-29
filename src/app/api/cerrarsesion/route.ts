@@ -1,24 +1,18 @@
 import { NextResponse, NextRequest } from 'next/server'
-import jwt from 'jsonwebtoken'
-import { serialize } from 'cookie'
-
-export async function GET() {
-
-    const token = jwt.sign({
-        exp: -1,
-      }, 'secret')
-      const serialized = serialize('token', token, {
-        httpOnly: true,
-        secure: false,
-        maxAge: -1,
-        path: '/',
-      })
-
-      const res = new Response(JSON.stringify({
-        mensaje: 'Sesion cerrada',
-      }), {})
+import { cookies } from 'next/headers'
 
 
-      res.headers.append('Set-Cookie', serialized)
-    return res;
+export async function GET(request: NextRequest, response: NextResponse) {
+  const cookie = cookies().get('myToken')
+  if (cookie) {
+    
+    cookies().set({
+      name: 'myToken',
+      value: '',
+      expires: new Date('1980-01-01'),
+      path: '/', // For all paths
+    })
+    return new Response (JSON.stringify('cookie eliminada'),{status:200})
   }
+  return new Response (JSON.stringify({error: "error"}),{status:500})
+} 

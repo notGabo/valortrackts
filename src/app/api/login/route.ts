@@ -33,6 +33,7 @@ export async function POST(request: NextRequest) {
       }
     // if data status is 200, return the data
     const data = await res.json()
+    console.log(data)
     const token = jwt.sign({
         exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 30,
         userid: data.items[0].userid,
@@ -43,7 +44,7 @@ export async function POST(request: NextRequest) {
         mail: data.items[0].mail,
         password: data.items[0].password,
       }, 'secret')
-    const serialized = serialize('token', token, {
+    const serialized = serialize('myToken', token, {
         httpOnly: true,
         secure: false,
         maxAge: 1000 * 60 * 60 * 24 * 30,

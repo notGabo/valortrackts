@@ -86,7 +86,7 @@ export default function TablaAgentes() {
   }
 
   return (
-    <Card className="m-5 bg-gray-900">
+    <Card className="m-5 dark:bg-gray-900 bg-[#EEE7D8]">
       <CardBody className="border rounded-xl border-rose-600">
         <table className=" border-rose-600 w-full table-auto text-left ">
           <thead>
@@ -94,7 +94,7 @@ export default function TablaAgentes() {
               {TABLE_HEAD.map((head, index) => (
                 <th
                   key={head}
-                  className="text-white cursor-pointer border-rose-600 p-4 w-[20%]"
+                  className="dark:text-white text-black cursor-pointer border-rose-600 p-4 w-[20%]"
                 >
                   <Typography
                     variant="small"
@@ -121,7 +121,7 @@ export default function TablaAgentes() {
                     <div className="flex items-center gap-3">
                       <Avatar src={agente.displayIconSmall} alt={agente.agentname} size="sm" />
                       <div className="flex flex-col">
-                        <Typography variant="small" color="blue-gray" className="text-white font-normal">
+                        <Typography variant="small" color="blue-gray" className="dark:text-white text-black font-normal">
                           {/* link with displayname name as href */}
                           <Link href={`/agentes/${agente.uuid}`}>
                             {agente.displayName}
@@ -130,7 +130,7 @@ export default function TablaAgentes() {
                         <Typography
                           variant="small"
                           color="blue-gray"
-                          className="text-white font-normal opacity-70"
+                          className="dark:text-white text-black font-normal opacity-70"
                         >
                           {agente.uuid}
                         </Typography>
@@ -139,28 +139,28 @@ export default function TablaAgentes() {
                   </td>
                   <td className={classes}>
                     <div className="flex flex-col">
-                      <Typography variant="small" color="blue-gray" className="text-white font-normal">
+                      <Typography variant="small" color="blue-gray" className="dark:text-white text-black font-normal">
                         {agente.role.displayName}
                       </Typography>
                     </div>
                   </td>
                   <td className={classes}>
-                    <Typography variant="small" color="blue-gray" className="text-white font-normal">
+                    <Typography variant="small" color="blue-gray" className="dark:text-white text-black font-normal">
                       {agente.description}
                     </Typography>
                   </td>
                   <td className={classes}>
-                    <Typography variant="small" color="blue-gray" className="text-white font-normal">
+                    <Typography variant="small" color="blue-gray" className="dark:text-white text-black font-normal">
                       {agente.pickrate}%
                     </Typography>
                   </td>
                   <td className={classes}>
-                    <Typography variant="small" color="blue-gray" className="text-white font-normal">
+                    <Typography variant="small" color="blue-gray" className="dark:text-white text-black font-normal">
                       {agente.winrate}%
                     </Typography>
                   </td>
                   <td className={classes}>
-                    <Typography variant="small" color="blue-gray" className="text-white font-normal">
+                    <Typography variant="small" color="blue-gray" className="dark:text-white text-black font-normal">
                       {(agente.loss*100 / agente.gamesplayed).toFixed(2)}%
                     </Typography>
                   </td>

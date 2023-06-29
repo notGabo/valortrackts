@@ -175,7 +175,7 @@ export default function Register() {
 
   return (
     <div className="flex min-h-screen items-center justify-center">
-      <div className="mx-6 mb-10 mt-10 w-full max-w-md rounded-lg border border-rose-600 bg-gray-900 p-6 shadow-lg md:mx-0">
+      <div className="mx-6 mb-10 mt-10 w-full max-w-md rounded-lg border border-rose-600 dark:bg-gray-900 bg-[#EEE7D8] p-6 shadow-lg md:mx-0">
         <div className="flex flex-col items-center justify-center">
           <CrosshairLogo className="fill-rose-600 h-[100px] w-[100px] mb-10 animate-pulse" />
           <h1 className="mb-6 text-2xl font-bold leading-tight text-rose-600 font-VALORANT">
@@ -194,7 +194,7 @@ export default function Register() {
                 name="mail"
                 id="mail"
                 onChange={handleChange}
-                className="focus:ring-rose-600 focus:border-rose-600 block w-full rounded-lg border-gray-600 bg-gray-700 p-2.5 text-white placeholder-gray-400 sm:text-sm"
+                className="dark:border-gray-600 dark:bg-gray-700  dark:text-white dark:placeholder-gray-400 bg-[#FCF8ED] border-gray-400  focus:ring-red-600 focus:border-red-600 block w-full rounded-lg p-2.5 sm:text-sm"
                 placeholder="correo@ejemplo.com"
                 required
               />
@@ -212,7 +212,7 @@ export default function Register() {
                 id="clave"
                 placeholder="••••••••"
                 onChange={handleChange}
-                className="focus:ring-rose-600 focus:border-rose-600 block w-full rounded-lg border-gray-600 bg-gray-700 p-2.5 text-white placeholder-gray-400  sm:text-sm"
+                className="dark:border-gray-600 dark:bg-gray-700  dark:text-white dark:placeholder-gray-400 bg-[#FCF8ED] border-gray-400  focus:ring-red-600 focus:border-red-600 block w-full rounded-lg p-2.5 sm:text-sm"
                 required
               />
             </div>
@@ -229,7 +229,7 @@ export default function Register() {
                 id="confirmpassword"
                 placeholder="••••••••"
                 onChange={handleConfirmPasswordChange}
-                className="focus:ring-rose-600 focus:border-rose-600 block w-full rounded-lg border-gray-600 bg-gray-700 p-2.5 text-white placeholder-gray-400  sm:text-sm"
+                className="dark:border-gray-600 dark:bg-gray-700  dark:text-white dark:placeholder-gray-400 bg-[#FCF8ED] border-gray-400  focus:ring-red-600 focus:border-red-600 block w-full rounded-lg p-2.5 sm:text-sm"
                 required
               />
             </div>
@@ -246,7 +246,7 @@ export default function Register() {
                 id="nombre"
                 placeholder="Juanito"
                 onChange={handleChange}
-                className="focus:ring-rose-600 focus:border-rose-600 block w-full rounded-lg border-gray-600 bg-gray-700 p-2.5 text-white placeholder-gray-400  sm:text-sm"
+                className="dark:border-gray-600 dark:bg-gray-700  dark:text-white dark:placeholder-gray-400 bg-[#FCF8ED] border-gray-400  focus:ring-red-600 focus:border-red-600 block w-full rounded-lg p-2.5 sm:text-sm"
                 required
               />
             </div>
@@ -262,7 +262,7 @@ export default function Register() {
                 id="genero"
                 defaultValue={0}
                 onChange={handleChange}
-                className="focus:ring-rose-600 focus:border-rose-600 block w-full rounded-lg border-gray-600 bg-gray-700 p-2.5 text-white placeholder-gray-400  sm:text-sm"
+                className="dark:border-gray-600 dark:bg-gray-700  dark:text-white dark:placeholder-gray-400 bg-[#FCF8ED] border-gray-400  focus:ring-red-600 focus:border-red-600 block w-full rounded-lg p-2.5 sm:text-sm"
                 required
               >
                 <option value={0} disabled>
@@ -286,7 +286,7 @@ export default function Register() {
                 id="telefono"
                 placeholder="912345678"
                 onChange={handleChange}
-                className="focus:ring-rose-600 focus:border-rose-600 block w-full rounded-lg border-gray-600 bg-gray-700 p-2.5 text-white placeholder-gray-400 sm:text-sm"
+                className="dark:border-gray-600 dark:bg-gray-700  dark:text-white dark:placeholder-gray-400 bg-[#FCF8ED] border-gray-400  focus:ring-red-600 focus:border-red-600 block w-full rounded-lg p-2.5 sm:text-sm"
                 required
               />
             </div>
@@ -302,7 +302,7 @@ export default function Register() {
                 name="nacimiento"
                 id="nacimiento"
                 onChange={handleChange}
-                className="focus:ring-rose-600 focus:border-rose-600 block w-full rounded-lg border-gray-600 bg-gray-700 p-2.5 text-white placeholder-gray-400 sm:text-sm"
+                className="dark:border-gray-600 dark:bg-gray-700  dark:text-white dark:placeholder-gray-400 bg-[#FCF8ED] border-gray-400  focus:ring-red-600 focus:border-red-600 block w-full rounded-lg p-2.5 sm:text-sm"
                 required
               />
             </div>
@@ -319,7 +319,7 @@ export default function Register() {
                 id="riotNombre"
                 placeholder="Juanito"
                 onChange={handleChange}
-                className="focus:ring-rose-600 focus:border-rose-600 block w-full rounded-lg border-gray-600 bg-gray-700 p-2.5 text-white placeholder-gray-400 sm:text-sm"
+                className="dark:border-gray-600 dark:bg-gray-700  dark:text-white dark:placeholder-gray-400 bg-[#FCF8ED] border-gray-400  focus:ring-red-600 focus:border-red-600 block w-full rounded-lg p-2.5 sm:text-sm"
                 required
               />
             </div>
@@ -336,7 +336,7 @@ export default function Register() {
                 id="riotTag"
                 placeholder="LAS"
                 onChange={handleChange}
-                className="focus:ring-rose-600 focus:border-rose-600 block w-full rounded-lg border-gray-600 bg-gray-700 p-2.5 text-white placeholder-gray-400 sm:text-sm"
+                className="dark:border-gray-600 dark:bg-gray-700  dark:text-white dark:placeholder-gray-400 bg-[#FCF8ED] border-gray-400  focus:ring-red-600 focus:border-red-600 block w-full rounded-lg p-2.5 sm:text-sm"
                 required
               />
             </div>
@@ -352,7 +352,7 @@ export default function Register() {
                 id="riotRegion"
                 defaultValue={0}
                 onChange={handleChange}
-                className="focus:ring-rose-600 focus:border-rose-600 block w-full rounded-lg border-gray-600 bg-gray-700 p-2.5 text-white placeholder-gray-400  sm:text-sm"
+                className="dark:border-gray-600 dark:bg-gray-700  dark:text-white dark:placeholder-gray-400 bg-[#FCF8ED] border-gray-400  focus:ring-red-600 focus:border-red-600 block w-full rounded-lg p-2.5 sm:text-sm"
                 required
               >
                 <option value="0" disabled>

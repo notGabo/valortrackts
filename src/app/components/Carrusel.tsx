@@ -17,13 +17,14 @@ const Carrusel = () => {
     {
       foto: "assets/images/second.jpg",
       texto: (
-        <p className='text-[11px] sm:text-base md:text-lg lg:text-xl xl:text-2xl'>¡Domina el campo de batalla en Valorant! Nuestra plataforma impulsada por IA analiza tu juego y te ofrece consejos personalizados para mejorar tus habilidades. Desbloquea tu verdadero potencial hoy mismo.</p>
+        <p className='text-[11px] sm:text-base md:text-lg lg:text-xl xl:text-2xl bg-black'>¡Domina el campo de batalla en Valorant! Nuestra plataforma impulsada por IA analiza tu juego y te ofrece consejos personalizados para mejorar tus habilidades. Desbloquea tu verdadero potencial hoy mismo.</p>
       )
     },
     {
       foto: "assets/images/third.jpg",
       texto: (
         <p className='text-[11px] sm:text-base md:text-lg lg:text-xl xl:text-2xl'>Obtén una ventaja competitiva sin dedicar horas infinitas. Nuestra plataforma inteligente utiliza algoritmos avanzados para identificar tus áreas de mejora y te proporciona estrategias sencillas para un rendimiento sobresaliente en Valorant.</p>
+        
       )
     },
     {
@@ -41,7 +42,7 @@ const Carrusel = () => {
     {
       foto: "assets/images/sixth.jpeg",
             texto: (
-        <p className='text-[11px] sm:text-base md:text-lg lg:text-xl xl:text-2xl'>Domina el arte de las decisiones tácticas en Valorant. Ya sea que prefieras un juego agresivo o inteligente, nuestra plataforma te brinda estrategias personalizadas para maximizar tu estilo y llevar tu rendimiento al siguiente nivel.</p>
+              <p className='text-[11px] sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white bg-black'>Domina el arte de las decisiones tácticas en Valorant. Ya sea que prefieras un juego agresivo o inteligente, nuestra plataforma te brinda estrategias personalizadas para maximizar tu estilo y llevar tu rendimiento al siguiente nivel.</p>
       )
     }
   ];
@@ -69,7 +70,7 @@ const Carrusel = () => {
       <Slide {...propiedadesSlide}>
         {imagenes.map((each, index) => (
           <div key={index} className='flex -top-[45px] justify-center lg:w-full relative'>
-            <img className='z-0 opacity-50 lg:w-screen lg:h-screen object-cover shadow-xl' src={each.foto} alt={`Slide ${index}`} />
+            <img className='z-0 lg:w-screen lg:h-screen object-cover shadow-xl' src={each.foto} alt={`Slide ${index}`} />
             <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center'>
               {each.texto}
             </div>

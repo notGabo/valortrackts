@@ -95,7 +95,7 @@ export default function Agente() {
       {/* Main Content */}
       <main className="flex-1 pt-2">
         <div className="pt-[40%] relative">
-          <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-0 left-0 w-full h-full invert dark:filter-none ">
             <img
               src={agenteData.background}
               alt=""
@@ -108,7 +108,7 @@ export default function Agente() {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center p-4 mt-4 text-white border-2 border-rose-600  bg-gray-900 rounded-md shadow-md">
+        <div className="flex items-center justify-center p-4 mt-4 dark:text-white dark:bg-gray-900 bg-[#eee7d8] border-2 border-rose-600   rounded-md shadow-md">
           <span className="text-xl text-center">{agenteData.description}</span>
         </div>
         <div className="flex items-center justify-center mt-4">
@@ -120,20 +120,20 @@ export default function Agente() {
           {agenteData.abilities.map((ability, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center justify-center w-full bg-gray-900 rounded-md border-2 border-rose-600 shadow-md text-white transition duration-300 hover:bg-[#0db196] min-w-min overflow-hidden ${
+              className={`flex flex-col items-center justify-center w-full dark:bg-gray-900 bg-[#eee7d8] text-white rounded-md border-2 border-rose-600 shadow-md  transition duration-dark:hover:hover:bg-[#0db196] 300 hover:bg-[#0db196] min-w-min overflow-hidden ${
                 index === agenteData.abilities.length - 1 ? "last-item" : ""
               }`}
             >
               <img
                 src={ability.displayIcon}
                 alt={ability.displayName}
-                className="w-8 h-8 mb-2 mt-2"
+                className="w-8 h-8 mb-2 mt-2 invert dark:filter-none"
               />
               <div className="flex flex-col items-center justify-center">
-                <span className="text-xl tracking-wider font-VALORANT uppercase">
+                <span className="text-xl tracking-wider font-VALORANT uppercase dark:text-white text-neutral-800">
                   {ability.displayName}
                 </span>
-                <p className="text-white pt-4 ml-4 mr-4 mb-4">
+                <p className="pt-4 ml-4 mr-4 mb-4 dark:text-white text-neutral-800">
                   {ability.description}
                 </p>
               </div>
@@ -146,67 +146,67 @@ export default function Agente() {
           </h1>
         </div>
         <div className="grid grid-cols-1 gap-6 mt-4 md:grid-cols-2 mb-5">
-          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 bg-gray-900 rounded-md shadow-md text-white transition duration-300 hover:bg-[#0db196]">
+          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 dark:bg-gray-900 bg-[#eee7d8] dark:text-white  text-neutral-800 rounded-md shadow-md  transition duration-300 dark:hover:hover:bg-[#0db196] hover:bg-[#0db196]">
             <span className="text-xl tracking-wider font-VALORANT uppercase">
               Total match
             </span>
-            <p className="text-white mt-2 font-semibold text-2xl">
+            <p className="dark:text-white text-neutral-800 mt-2 font-semibold text-2xl ">
               {stats?.gamesplayed ? stats?.gamesplayed : "N/A"}
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 bg-gray-900 rounded-md shadow-md text-white transition duration-300 hover:bg-[#0db196]">
+          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 dark:bg-gray-900 bg-[#eee7d8] dark:text-white  text-neutral-800 rounded-md shadow-md  transition duration-300 dark:hover:hover:bg-[#0db196] hover:bg-[#0db196]">
             <span className="text-xl tracking-wider font-VALORANT uppercase">
               Veces escogido
             </span>
-            <p className="text-white mt-2 font-semibold text-2xl">
+            <p className="dark:text-white text-neutral-800 mt-2 font-semibold text-2xl">
               {stats?.timespicked ? stats?.timespicked : "N/A"}
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 bg-gray-900 rounded-md shadow-md text-white transition duration-300 hover:bg-[#0db196]">
+          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 dark:bg-gray-900 bg-[#eee7d8] dark:text-white  text-neutral-800 rounded-md shadow-md  transition duration-300 dark:hover:hover:bg-[#0db196] hover:bg-[#0db196]">
             <span className="text-xl tracking-wider font-VALORANT uppercase">
               Porcentaje de veces escogido
             </span>
-            <p className="text-white mt-2 font-semibold text-2xl">
+            <p className="dark:text-white text-neutral-800 mt-2 font-semibold text-2xl">
               {stats?.pickrate ? stats?.pickrate+"%"  : "N/A"}
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 bg-gray-900 rounded-md shadow-md text-white transition duration-300 hover:bg-[#0db196]">
+          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 dark:bg-gray-900 bg-[#eee7d8] dark:text-white  text-neutral-800 rounded-md shadow-md  transition duration-300 dark:hover:hover:bg-[#0db196] hover:bg-[#0db196]">
             <span className="text-xl tracking-wider font-VALORANT uppercase">
               Partidas jugadas
             </span>
-            <p className="text-white mt-2 font-semibold text-2xl">
+            <p className="dark:text-white text-neutral-800 mt-2 font-semibold text-2xl">
               {stats?.gamesplayed ? stats?.gamesplayed : "N/A"}
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 bg-gray-900 rounded-md shadow-md text-white transition duration-300 hover:bg-[#0db196]">
+          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 dark:bg-gray-900 bg-[#eee7d8] dark:text-white  text-neutral-800 rounded-md shadow-md  transition duration-300 dark:hover:hover:bg-[#0db196] hover:bg-[#0db196]">
             <span className="text-xl tracking-wider font-VALORANT uppercase">
               Partidas ganadas
             </span>
-            <p className="text-white mt-2 font-semibold text-2xl">
+            <p className="dark:text-white text-neutral-800 mt-2 font-semibold text-2xl">
               {stats?.wins ? stats?.wins : "N/A"}
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 bg-gray-900 rounded-md shadow-md text-white transition duration-300 hover:bg-[#0db196]">
+          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 dark:bg-gray-900 bg-[#eee7d8] dark:text-white  text-neutral-800 rounded-md shadow-md  transition duration-300 dark:hover:hover:bg-[#0db196] hover:bg-[#0db196]">
             <span className="text-xl tracking-wider font-VALORANT uppercase">
               Partidas perdidas
             </span>
-            <p className="text-white mt-2 font-semibold text-2xl">
+            <p className="dark:text-white text-neutral-800 mt-2 font-semibold text-2xl">
               {stats?.loss ? stats?.loss  : "N/A"}
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 bg-gray-900 rounded-md shadow-md text-white transition duration-300 hover:bg-[#0db196]">
+          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 dark:bg-gray-900 bg-[#eee7d8] dark:text-white  text-neutral-800 rounded-md shadow-md  transition duration-300 dark:hover:hover:bg-[#0db196] hover:bg-[#0db196]">
             <span className="text-xl tracking-wider font-VALORANT uppercase">
               Porcentaje de victorias
             </span>
-            <p className="text-white mt-2 font-semibold text-2xl">
+            <p className="dark:text-white text-neutral-800 mt-2 font-semibold text-2xl">
               {stats?.winrate ? stats?.winrate+'%' : "N/A"}
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 bg-gray-900 rounded-md shadow-md text-white transition duration-300 hover:bg-[#0db196]">
+          <div className="flex flex-col items-center justify-center w-full h-56 border-2 border-rose-600 dark:bg-gray-900 bg-[#eee7d8] dark:text-white  text-neutral-800 rounded-md shadow-md  transition duration-300 dark:hover:hover:bg-[#0db196] hover:bg-[#0db196]">
             <span className="text-xl tracking-wider font-VALORANT uppercase">
               Porcentaje de derrotas
             </span>
-            <p className="text-white mt-2 font-semibold text-2xl">
+            <p className="dark:text-white text-neutral-800 mt-2 font-semibold text-2xl">
               {stats?.loss ? ((stats?.loss*100)/stats?.gamesplayed).toFixed(2)+'%' : "N/A"}
             </p>
           </div>

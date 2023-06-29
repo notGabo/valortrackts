@@ -7,7 +7,7 @@ import SearchBar from "./components/Searchbar";
 
 const home = () => {
   return (
-    <div className="">
+    <div >
         <SearchBar/>
         <App/>
         {/* <Carrusel /> */}

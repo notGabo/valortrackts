@@ -21,7 +21,7 @@ const SearchBar = () => {
     <div className="m-9 flex sm:flex-wrap md:flex-wrap">
   <input
     type="text"
-    className="flex-1 px-4 py-2 rounded-lg bg-gray-900 text-white focus:outline-none focus:ring focus:border-rose-600 transition active:border-rose-600"
+    className="flex-1 px-4 py-2 rounded-lg dark:bg-gray-900 bg-[#eee7d8] text-white focus:outline-none focus:ring focus:border-rose-600 focus:ring-rose-600 transition active:border-rose-600"
     placeholder="Player#LAS"
     value={searchQuery}
     onChange={handleInputChange}
@@ -29,7 +29,7 @@ const SearchBar = () => {
   />
   
   <button
-    className=" lg:w-1/12 md:4/12 transition rounded-lg bg-rose-600 text-gray-900 hover:bg-white hover:text-rose-600 focus:outline-none focus:ring focus:border-rose-600"
+    className="lg:w-1/12 md:4/12 transition rounded-lg bg-rose-600 dark:text-gray-900  text-white hover:bg-green-600   focus:outline-none focus:ring focus:border-rose-600"
     onClick={handleSearch}
   >
     Buscar

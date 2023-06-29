@@ -102,7 +102,7 @@ export default function Login() {
     <>
       <div className="mx-auto flex min-h-screen flex-col items-center justify-center px-6 py-8 md:h-screen lg:py-0">
         <CrosshairLogo className="fill-rose-600 h-[100px] w-[100px] mb-10 animate-pulse" />
-        <div className="w-full rounded-lg border border-rose-600 bg-gray-900 shadow sm:max-w-md md:mt-0 xl:p-0">
+        <div className="w-full rounded-lg border border-rose-600 dark:bg-gray-900 bg-[#EEE7D8] shadow sm:max-w-md md:mt-0 xl:p-0">
           <div className="space-y-4 p-6 sm:p-8 md:space-y-6">
             <h1 className="text-xl font-VALORANT text-rose-600 md:text-2xl">
               Ingresa a tu cuenta
@@ -120,7 +120,7 @@ export default function Login() {
                   name="mail"
                   id="mail"
                   onChange={handleChange}
-                  className="focus:ring-red-600 focus:border-red-600 block w-full rounded-lg border-gray-600 bg-gray-700 p-2.5 text-white placeholder-gray-400 sm:text-sm"
+                  className="dark:border-gray-600 dark:bg-gray-700  dark:text-white dark:placeholder-gray-400 bg-[#FCF8ED] border-gray-400  focus:ring-red-600 focus:border-red-600 block w-full rounded-lg p-2.5 sm:text-sm"
                   placeholder="correo@ejemplo.com"
                   required
                 />
@@ -137,7 +137,7 @@ export default function Login() {
                   name="clave"
                   id="clave"
                   onChange={handleChange}
-                  className="focus:ring-red-600 focus:border-red-600 block w-full rounded-lg border-gray-600 bg-gray-700 p-2.5 text-white placeholder-gray-400 sm:text-sm"
+                  className="dark:border-gray-600 dark:bg-gray-700  dark:text-white dark:placeholder-gray-400 bg-[#FCF8ED] border-gray-400  focus:ring-red-600 focus:border-red-600 block w-full rounded-lg p-2.5 sm:text-sm"
                   placeholder="********"
                   required
                 />
