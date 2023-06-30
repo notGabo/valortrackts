@@ -34,7 +34,7 @@ export default function TablaAgentes() {
   const [agentes, setAgentes] = useState<Agentes[]>([]);
 
   useEffect(() => { 
-    const urlAgentesData = 'http://localhost:3000/api/agentes'
+    const urlAgentesData = '/api/agentes'
     const urlAgentesStats = 'https://g722d0e58d6fa66-clasesdb.adb.sa-santiago-1.oraclecloudapps.com/ords/valortrack/api/v1/agentdata/'
     const fetchAgentes = async () => {
       try{
@@ -151,17 +151,17 @@ export default function TablaAgentes() {
                   </td>
                   <td className={classes}>
                     <Typography variant="small" color="blue-gray" className="dark:text-white text-black font-normal">
-                      {agente.pickrate}%
+                      {agente.pickrate ? agente.pickrate : 0}%
                     </Typography>
                   </td>
                   <td className={classes}>
                     <Typography variant="small" color="blue-gray" className="dark:text-white text-black font-normal">
-                      {agente.winrate}%
+                      {agente.winrate ? agente.winrate: 0}%
                     </Typography>
                   </td>
                   <td className={classes}>
                     <Typography variant="small" color="blue-gray" className="dark:text-white text-black font-normal">
-                      {(agente.loss*100 / agente.gamesplayed).toFixed(2)}%
+                      {agente.loss ? (agente.loss*100 / agente.gamesplayed).toFixed(2)+'%' : '0%'}
                     </Typography>
                   </td>
                 </tr>
