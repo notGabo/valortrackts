@@ -100,7 +100,7 @@ const Footer = () => {
               <div>
                 <Link
                   className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
-                  href=""
+                  href="https://github.com/notGabo/valortrackts/tree/master/Diagramas"
                 >
                   Diagramas
                 </Link>
