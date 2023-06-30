@@ -399,7 +399,7 @@ export default function Jugador() {
         </div>
         <div className="flex flex-col items-center justify-center w-full h-80 overflow-y-scroll">
             {
-                jugador.stats.map((stat) => (
+                jugador.stats.slice(1,10).map((stat) => (
                     <div className="flex flex-row items-center justify-center w-full h-16 border-b-2 border-rose-600 dark:bg-gray-900 bg-[#eee7d8] dark:text-white  text-neutral-800 rounded-md shadow-md overflow-y-scroll transition duration-300 dark:hover:hover:bg-[#0db196] hover:bg-[#0db196]">
                         <div className="flex flex-row items-center justify-center w-1/6 h-full">
                             <span className="text-xl tracking-wider font-VALORANT uppercase">

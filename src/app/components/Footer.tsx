@@ -30,7 +30,7 @@ const Footer = () => {
               <div className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-indigo-600">
                 <Link
                   className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
-                  href="#"
+                  href="https://www.duoc.cl/"
                 >
                   Duoc UC
                 </Link>
@@ -46,7 +46,7 @@ const Footer = () => {
               <div>
                 <Link
                   className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
-                  href="#"
+                  href="https://github.com/notGabo"
                 >
                   Contacto
                 </Link>
@@ -61,7 +61,7 @@ const Footer = () => {
               <div>
                 <Link
                   className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
-                  href="#"
+                  href="https://github.com/Alvaro-AAC"
                 >
                   @Alvaro-AAC
                 </Link>
@@ -69,7 +69,7 @@ const Footer = () => {
               <div>
                 <Link
                   className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
-                  href="#"
+                  href="https://github.com/notGabo"
                 >
                   @notGabo
                 </Link>
@@ -84,7 +84,7 @@ const Footer = () => {
               <div>
                 <Link
                   className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
-                  href="#"
+                  href="https://github.com/notGabo/valortrackts"
                 >
                   Repositorio front end
                 </Link>
@@ -92,15 +92,15 @@ const Footer = () => {
               <div>
                 <Link
                   className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
-                  href="#"
+                  href="http://129.151.120.46:8123/lab"
                 >
-                  Repositorio back end
+                  Link backend Jupyter
                 </Link>
               </div>
               <div>
                 <Link
                   className="transition duration-100 dark:text-gray-400 text-neutral-700 hover:text-rose-500 active:text-rose-600"
-                  href="#"
+                  href=""
                 >
                   Diagramas
                 </Link>
